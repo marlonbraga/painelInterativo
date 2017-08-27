@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/ANIMACAO DE INTERPOLACAO/cena.unity
+  isLoaded: 1
+  isActive: 1
