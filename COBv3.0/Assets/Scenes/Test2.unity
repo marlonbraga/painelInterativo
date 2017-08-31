@@ -2646,7 +2646,7 @@ Prefab:
     - target: {fileID: 13700002, guid: 3407b1dc86d75d448ae632980812f937, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 545fc1dba2bcb8840b0d47a20e4ac8b1, type: 2}
+      objectReference: {fileID: 2100000, guid: ae5d1deef7bb76f42bbdfaf5ce64d5cd, type: 2}
     - target: {fileID: 100000, guid: 3407b1dc86d75d448ae632980812f937, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2835,7 +2835,7 @@ Prefab:
     - target: {fileID: 13700000, guid: 3407b1dc86d75d448ae632980812f937, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 545fc1dba2bcb8840b0d47a20e4ac8b1, type: 2}
+      objectReference: {fileID: 2100000, guid: ae5d1deef7bb76f42bbdfaf5ce64d5cd, type: 2}
     - target: {fileID: 100072, guid: 3407b1dc86d75d448ae632980812f937, type: 3}
       propertyPath: m_Name
       value: ModelFemale
