@@ -2361,7 +2361,7 @@ public class KinectManager : MonoBehaviour
 			calibrationText.text = "WAITING FOR USERS";
 		}
 		
-		//Debug.Log("Waiting for users.");
+		Debug.Log("Waiting for users.");
 	}
 
     private KinectInterop.SmoothParameters InitSmoothParameters( Smoothing smoothing )
@@ -3796,7 +3796,7 @@ public class KinectManager : MonoBehaviour
 					return;
 				}
 				
-				//Debug.Log("Adding user " + uidIndex + ", ID: " + userId + ", Body: " + bodyIndex);
+				Debug.Log("Adding user " + uidIndex + ", ID: " + userId + ", Body: " + bodyIndex);
 
 				dictUserIdToIndex[userId] = bodyIndex;
 				dictUserIdToTime[userId] = Time.time;
@@ -3855,7 +3855,7 @@ public class KinectManager : MonoBehaviour
 	{
 		//int uidIndex = alUserIds.IndexOf(userId);
 		int uidIndex = Array.IndexOf(aUserIndexIds, userId);
-		//Debug.Log("Removing user " + uidIndex + ", ID: " + userId + ", Body: " + dictUserIdToIndex[userId]);
+		Debug.Log("Removing user " + uidIndex + ", ID: " + userId + ", Body: " + dictUserIdToIndex[userId]);
 
 //		// reset the respective avatar controllers
 //		for(int i = 0; i < avatarControllers.Count; i++)
@@ -3931,7 +3931,7 @@ public class KinectManager : MonoBehaviour
 		
 		if(alUserIds.Count == 0)
 		{
-			//Debug.Log("Waiting for users.");
+			Debug.Log("Waiting for users.");
 			
 			if(calibrationText != null)
 			{

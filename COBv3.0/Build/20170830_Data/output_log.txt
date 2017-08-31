@@ -1,0 +1,54 @@
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     4064 MB
+    Driver:   21.21.13.6909
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\LZ4Sharp.dll (this message is harmless)
+Loading C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\LZ4Sharp.dll into Unity Child Domain
+Platform assembly: C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\ICSharpCode.SharpZipLib.dll (this message is harmless)
+Loading C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\ICSharpCode.SharpZipLib.dll into Unity Child Domain
+Platform assembly: C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\OverReal\Documents\painelInterativo\COBv3.0\Build\20170830_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.727 seconds
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 3.017331 ms
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/Kinect10.dll
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/.\Kinect10.dll
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/Kinect10.dll
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/Kinect10
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/.\Kinect10
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/Kinect10
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/libKinect10.dll
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/.\libKinect10.dll
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/libKinect10.dll
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/Kinect10.dll
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/.\Kinect10.dll
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/Kinect10.dll
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/Kinect10
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/.\Kinect10
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/Kinect10
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/libKinect10.dll
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/.\libKinect10.dll
+Fallback handler could not load library C:/Users/OverReal/Documents/painelInterativo/COBv3.0/Build/20170830_Data/Mono/libKinect10.dll
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2870 -> priority: 1 
+  Thread -> id: 225c -> priority: 1 
