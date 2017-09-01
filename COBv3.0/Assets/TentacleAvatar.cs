@@ -3,15 +3,41 @@ using System.Collections.Generic;
 
 public class TentacleAvatar : MonoBehaviour
 {
+    private GameObject tentacleTarget;
+    [SerializeField, Range(0, 10)]
+    private float speed;
 
-    public GameObject TentacleTarget;
-    [Range(0,10)]
-    public float speed;
+    public GameObject TentacleTarget
+    {
+        get
+        {
+            return tentacleTarget;
+        }
+
+        set
+        {
+            tentacleTarget = value;
+        }
+    }
+
+    public float Speed
+    {
+        get
+        {
+            return speed;
+        }
+
+        set
+        {
+            speed = value;
+        }
+    }
 
     void FixedUpdate()
     {
-            iTween.MoveUpdate(gameObject, TentacleTarget.transform.position, 0.2f + speed * 0.2f);
+        iTween.MoveUpdate(gameObject, TentacleTarget.transform.position, 0.2f + Speed * 0.2f);
     }
+
     //public static List<Transform> jointTentacle = new List<Transform>();
 
     //// Use this for initialization
