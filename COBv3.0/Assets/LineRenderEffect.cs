@@ -14,13 +14,10 @@ public class LineRenderEffect : MonoBehaviour
     private List<GameObject> tentacleRig = new List<GameObject>();
     private List<GameObject> pointsTarget = new List<GameObject>();
     private Vector3 lastPosition;
-    private float lastVelocity;
-    private GameObject lastJoint;
-    private Vector3 firstJoint;
-
+    private Queue<float> medVelocity = new Queue<float>();
     public float x;
     public float velocity;
-    public float scaleObject = 0.01f;
+    public float scaleObject;
 
     private void Start()
     {
@@ -37,22 +34,16 @@ public class LineRenderEffect : MonoBehaviour
             tj.GetComponent<TentacleAvatar>().TentacleTarget = pt;
             tj.GetComponent<TentacleAvatar>().Speed = i / 10;
             tentacleRig.Add(tj);
-
-            if (i == 0)
-            {
-                firstJoint = pt.transform.localPosition;
-            }
-
-            if (i == numOfVertices - 1)
-            {
-                lastJoint = pt;
-            }
         }
         GetComponent<LineRenderer>().positionCount = numOfVertices;
     }
 
     void Update()
     {
+        Hashtable hashtable = new Hashtable();
+        hashtable.Add("time", 1f);
+        hashtable.Add("islocal", true);
+
         for (int i = 0; i < tentacleRig.Count; i++)
         {
             GetComponent<LineRenderer>().SetPosition(i, tentacleRig[i].transform.position);
@@ -62,23 +53,40 @@ public class LineRenderEffect : MonoBehaviour
         velocity = (transform.parent.position - lastPosition).magnitude / Time.deltaTime;
         lastPosition = transform.parent.position;
 
+        if (medVelocity.Count < 10)
+        {
+            medVelocity.Enqueue(velocity);
+        }
+        else
+        {
+            medVelocity.Dequeue();
+            medVelocity.Enqueue(velocity);
+        }
+
+        for (int i = 0; i < medVelocity.Count; i++)
+        {
+            velocity = (velocity + medVelocity.ToArray()[i]);
+        }
+
+        velocity = velocity / medVelocity.Count;
+
         if (velocity > x)
         {
-            for (int i = 0; i < tentacleRig.Count; i++)
+            for (int i = 0; i < pointsTarget.Count; i++)
             {
-                iTween.MoveUpdate(pointsTarget[i], new Vector3(0, 10 * (i / 100), 0), 0.2f);
+                hashtable.Add("position", new Vector3(0, i + 1, 0));
+                iTween.MoveUpdate(pointsTarget[i], hashtable);
+                hashtable.Remove("position");
             }
         }
         else
         {
-            for (int i = 0; i < tentacleRig.Count; i++)
+            for (int i = 0; i < pointsTarget.Count; i++)
             {
-                iTween.MoveUpdate(pointsTarget[i], Vector3.zero, 0.2f);
+                hashtable.Add("position", Vector3.zero);
+                iTween.MoveUpdate(pointsTarget[i], hashtable);
+                hashtable.Remove("position");
             }
         }
-
-        //if (velocity > lastVelocity)//Checa se ele está se movendo.
-
-        lastVelocity = velocity;//Salva a última velocidade.
     }
 }

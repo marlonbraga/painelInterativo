@@ -9175,12 +9175,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77819df89523f2a40a26b094e284ea99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numOfVertices: 10
+  numOfVertices: 20
   pointTarget: {fileID: 1730525288041516, guid: 860ca1f58f8620343a97deddcdf468e9,
     type: 2}
   tentacleJoint: {fileID: 1458328933218976, guid: 5542476887c1e8140985c123063034fa,
     type: 2}
-  x: 0.1
+  x: 1
   velocity: 0
   scaleObject: 0.01
 --- !u!1 &1861290729
