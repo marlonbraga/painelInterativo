@@ -18,6 +18,7 @@ public class LineRenderEffect : MonoBehaviour
     public float x;
     public float velocity;
     public float scaleObject;
+    public GameObject hand;
 
     private void Start()
     {
@@ -32,7 +33,15 @@ public class LineRenderEffect : MonoBehaviour
             var tj = Instantiate(tentacleJoint);
             tj.name = "TentacleJoint" + i;
             tj.GetComponent<TentacleAvatar>().TentacleTarget = pt;
-            tj.GetComponent<TentacleAvatar>().Speed = i / 10;
+            tj.GetComponent<TentacleAvatar>().Speed = (i * 0.15f);
+            if (i == numOfVertices - 1)
+            {
+                hand = Instantiate(hand, tj.transform);
+                hand.GetComponent<HandElastic>().target = tentacleRig[i - 1].transform;
+                hand.transform.localPosition = Vector3.zero;
+                hand.transform.localScale = new Vector3(0.1f,0.1f,0.1f);
+                hand.transform.localRotation = Quaternion.Euler(180, 0, 0);
+            }
             tentacleRig.Add(tj);
         }
         GetComponent<LineRenderer>().positionCount = numOfVertices;
@@ -52,7 +61,8 @@ public class LineRenderEffect : MonoBehaviour
         //ALONGAR BRAÇOS
         velocity = (transform.parent.position - lastPosition).magnitude / Time.deltaTime;
         lastPosition = transform.parent.position;
-
+        
+        //Update window of velocity
         if (medVelocity.Count < 10)
         {
             medVelocity.Enqueue(velocity);
@@ -63,6 +73,7 @@ public class LineRenderEffect : MonoBehaviour
             medVelocity.Enqueue(velocity);
         }
 
+        //
         for (int i = 0; i < medVelocity.Count; i++)
         {
             velocity = (velocity + medVelocity.ToArray()[i]);
@@ -78,6 +89,7 @@ public class LineRenderEffect : MonoBehaviour
                 iTween.MoveUpdate(pointsTarget[i], hashtable);
                 hashtable.Remove("position");
             }
+            hand.SetActive(true);
         }
         else
         {
@@ -87,6 +99,7 @@ public class LineRenderEffect : MonoBehaviour
                 iTween.MoveUpdate(pointsTarget[i], hashtable);
                 hashtable.Remove("position");
             }
+            hand.SetActive(false);
         }
     }
 }

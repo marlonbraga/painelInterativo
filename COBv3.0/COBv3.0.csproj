@@ -99,6 +99,7 @@
     <Compile Include="Assets\ANIMACAO DE INTERPOLACAO\Sphere.cs" />
     <Compile Include="Assets\EyePoint.cs" />
     <Compile Include="Assets\Hadouken.cs" />
+    <Compile Include="Assets\HandElastic.cs" />
     <Compile Include="Assets\JointKey.cs" />
     <Compile Include="Assets\KinectDemos\AvatarsDemo\Scripts\CameraPitchCorrector.cs" />
     <Compile Include="Assets\KinectDemos\AvatarsDemo\Scripts\OffsetNodeMover.cs" />

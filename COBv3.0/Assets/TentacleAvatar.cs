@@ -35,7 +35,7 @@ public class TentacleAvatar : MonoBehaviour
 
     void FixedUpdate()
     {
-        iTween.MoveUpdate(gameObject, TentacleTarget.transform.position, 1f);
+        iTween.MoveUpdate(gameObject, TentacleTarget.transform.position, Speed);
     }
 
     //public static List<Transform> jointTentacle = new List<Transform>();
