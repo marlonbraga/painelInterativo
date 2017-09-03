@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class IdleForm : MonoBehaviour
 {
-
     public bool activate = false;
     private bool reducing = false;
     private bool augmenting = false;
@@ -14,7 +13,7 @@ public class IdleForm : MonoBehaviour
     public float speedRotation = 10;
     public float speedReducing = 3;
     public GameObject particles;
-    public GameObject avatar;
+    public GameObject[] avatar;
     public FollowingSpheres followingSpheres;
 
     private float InitialScaleForm;
@@ -27,7 +26,7 @@ public class IdleForm : MonoBehaviour
 
     void Update()
     {
-        //IDLE rotation
+        /*//IDLE rotation
         transform.Rotate(0, 0f, speedRotation * Time.deltaTime);
 
         //IDLE pulsing
@@ -44,7 +43,7 @@ public class IdleForm : MonoBehaviour
             float PulsingFactor = pulseSpeed * idlePulse * Time.deltaTime;
             Vector3 ReducingVector = new Vector3(PulsingFactor, PulsingFactor, PulsingFactor);
             transform.localScale = transform.localScale + ReducingVector;
-        }
+        }*/
         //ACTIVATE
         if (activate == true && reducing == false && augmenting == false && user == false)
         {
@@ -60,7 +59,6 @@ public class IdleForm : MonoBehaviour
         else
         if (activate == false && reducing == false && augmenting == false && user == true)
         {
-
             augmenting = true;
             particles.SetActive(true);
             StartCoroutine(AugmenteCube());
@@ -81,7 +79,6 @@ public class IdleForm : MonoBehaviour
         reducing = false;
         GetComponent<MeshRenderer>().enabled = false;
         //transform.localScale = new Vector3(InitialScaleForm, InitialScaleForm, InitialScaleForm);
-
     }
     IEnumerator AugmenteCube()
     {
@@ -100,9 +97,12 @@ public class IdleForm : MonoBehaviour
     IEnumerator ShowAvatar(bool b, float delay)
     {
         yield return new WaitForSeconds(delay * Time.deltaTime);
-        if (avatar)
+        if (avatar[0])
         {
-            avatar.SetActive(b);
+            for (int i = 0; i < avatar.Length-1; i++)
+            {
+                avatar[i].SetActive(b);
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ public class LineRenderEffect : MonoBehaviour
     public float velocity;
     public float scaleObject;
     public GameObject hand;
-    public GameObject ocludeHand;
+   // public GameObject ocludeHand;
 
     private void Start()
     {
@@ -83,7 +83,7 @@ public class LineRenderEffect : MonoBehaviour
                 iTween.MoveUpdate(pointsTarget[i], hashtable);
                 hashtable.Remove("position");
             }
-            ocludeHand.SetActive(true);
+            //ocludeHand.SetActive(true);
             hand.SetActive(true);
         }
         else
@@ -94,7 +94,7 @@ public class LineRenderEffect : MonoBehaviour
                 iTween.MoveUpdate(pointsTarget[i], hashtable);
                 hashtable.Remove("position");
             }
-            ocludeHand.SetActive(false);
+            //ocludeHand.SetActive(false);
             hand.SetActive(false);
         }
     }
