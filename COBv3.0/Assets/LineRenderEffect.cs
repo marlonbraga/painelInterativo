@@ -19,6 +19,7 @@ public class LineRenderEffect : MonoBehaviour
     public float velocity;
     public float scaleObject;
     public GameObject hand;
+    public GameObject ocludeHand;
 
     private void Start()
     {
@@ -53,15 +54,9 @@ public class LineRenderEffect : MonoBehaviour
         hashtable.Add("time", 1f);
         hashtable.Add("islocal", true);
 
-        for (int i = 0; i < tentacleRig.Count; i++)
-        {
-            GetComponent<LineRenderer>().SetPosition(i, tentacleRig[i].transform.position);
-        }
-
-        //ALONGAR BRAÇOS
         velocity = (transform.parent.position - lastPosition).magnitude / Time.deltaTime;
         lastPosition = transform.parent.position;
-        
+
         //Update window of velocity
         if (medVelocity.Count < 10)
         {
@@ -78,7 +73,6 @@ public class LineRenderEffect : MonoBehaviour
         {
             velocity = (velocity + medVelocity.ToArray()[i]);
         }
-
         velocity = velocity / medVelocity.Count;
 
         if (velocity > x)
@@ -89,6 +83,7 @@ public class LineRenderEffect : MonoBehaviour
                 iTween.MoveUpdate(pointsTarget[i], hashtable);
                 hashtable.Remove("position");
             }
+            ocludeHand.SetActive(true);
             hand.SetActive(true);
         }
         else
@@ -99,7 +94,16 @@ public class LineRenderEffect : MonoBehaviour
                 iTween.MoveUpdate(pointsTarget[i], hashtable);
                 hashtable.Remove("position");
             }
+            ocludeHand.SetActive(false);
             hand.SetActive(false);
         }
+    }
+    void LateUpdate() { 
+        //Desenhar braço (LINE RENDERER)
+        for (int i = 0; i < tentacleRig.Count; i++)
+        {
+            GetComponent<LineRenderer>().SetPosition(i, tentacleRig[i].transform.position);
+        }
+
     }
 }
