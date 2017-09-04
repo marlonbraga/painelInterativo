@@ -3797,7 +3797,7 @@ public class KinectManager : MonoBehaviour
 				}
 				
 				Debug.Log("Adding user " + uidIndex + ", ID: " + userId + ", Body: " + bodyIndex);
-
+                Game_Manager.AvatarAddicioned(bodyIndex);
 				dictUserIdToIndex[userId] = bodyIndex;
 				dictUserIdToTime[userId] = Time.time;
 				alUserIds.Add(userId);
@@ -3856,7 +3856,7 @@ public class KinectManager : MonoBehaviour
 		//int uidIndex = alUserIds.IndexOf(userId);
 		int uidIndex = Array.IndexOf(aUserIndexIds, userId);
 		Debug.Log("Removing user " + uidIndex + ", ID: " + userId + ", Body: " + dictUserIdToIndex[userId]);
-
+        Game_Manager.AvatarRemovement(uidIndex);
 //		// reset the respective avatar controllers
 //		for(int i = 0; i < avatarControllers.Count; i++)
 //		{
@@ -3870,8 +3870,8 @@ public class KinectManager : MonoBehaviour
 //			}
 //		}
 
-		// notify all gesture listeners for losing this user
-		foreach(KinectGestures.GestureListenerInterface listener in gestureListeners)
+        // notify all gesture listeners for losing this user
+        foreach (KinectGestures.GestureListenerInterface listener in gestureListeners)
 		{
 			if(listener != null)
 			{

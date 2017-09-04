@@ -98,6 +98,7 @@
     <Compile Include="Assets\ANIMACAO DE INTERPOLACAO\Plugins\Pixelplacement\iTween\Sample\SampleInfo.cs" />
     <Compile Include="Assets\ANIMACAO DE INTERPOLACAO\Sphere.cs" />
     <Compile Include="Assets\EyePoint.cs" />
+    <Compile Include="Assets\Game_Manager.cs" />
     <Compile Include="Assets\Hadouken.cs" />
     <Compile Include="Assets\HandElastic.cs" />
     <Compile Include="Assets\JointKey.cs" />

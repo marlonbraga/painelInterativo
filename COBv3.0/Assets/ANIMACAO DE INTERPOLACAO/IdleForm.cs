@@ -26,24 +26,24 @@ public class IdleForm : MonoBehaviour
 
     void Update()
     {
-        /*//IDLE rotation
-        transform.Rotate(0, 0f, speedRotation * Time.deltaTime);
+        ////IDLE rotation
+        //transform.Rotate(0, 0f, speedRotation * Time.deltaTime);
 
-        //IDLE pulsing
-        if (activate == false)
-        {
-            if (transform.localScale.x > InitialScaleForm + pulseIntensity)
-            {
-                idlePulse = idlePulse * -1;
-            }
-            if (transform.localScale.x < InitialScaleForm - pulseIntensity)
-            {
-                idlePulse = idlePulse * -1;
-            }
-            float PulsingFactor = pulseSpeed * idlePulse * Time.deltaTime;
-            Vector3 ReducingVector = new Vector3(PulsingFactor, PulsingFactor, PulsingFactor);
-            transform.localScale = transform.localScale + ReducingVector;
-        }*/
+        ////IDLE pulsing
+        //if (activate == false)
+        //{
+        //    if (transform.localScale.x > InitialScaleForm + pulseIntensity)
+        //    {
+        //        idlePulse = idlePulse * -1;
+        //    }
+        //    if (transform.localScale.x < InitialScaleForm - pulseIntensity)
+        //    {
+        //        idlePulse = idlePulse * -1;
+        //    }
+        //    float PulsingFactor = pulseSpeed * idlePulse * Time.deltaTime;
+        //    Vector3 ReducingVector = new Vector3(PulsingFactor, PulsingFactor, PulsingFactor);
+        //    transform.localScale = transform.localScale + ReducingVector;
+        //}
         //ACTIVATE
         if (activate == true && reducing == false && augmenting == false && user == false)
         {
@@ -97,12 +97,10 @@ public class IdleForm : MonoBehaviour
     IEnumerator ShowAvatar(bool b, float delay)
     {
         yield return new WaitForSeconds(delay * Time.deltaTime);
-        if (avatar[0])
+
+        for (int i = 0; i < avatar.Length - 1; i++)
         {
-            for (int i = 0; i < avatar.Length-1; i++)
-            {
-                avatar[i].SetActive(b);
-            }
+            if (avatar[0]) { avatar[i].SetActive(b); }
         }
     }
 }

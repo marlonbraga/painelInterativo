@@ -54,8 +54,8 @@ public class LineRenderEffect : MonoBehaviour
         hashtable.Add("time", 1f);
         hashtable.Add("islocal", true);
 
-        velocity = (transform.parent.position - lastPosition).magnitude / Time.deltaTime;
-        lastPosition = transform.parent.position;
+        velocity = (transform.parent.parent.position - lastPosition).magnitude / Time.deltaTime;
+        lastPosition = transform.parent.parent.position;
 
         //Update window of velocity
         if (medVelocity.Count < 10)

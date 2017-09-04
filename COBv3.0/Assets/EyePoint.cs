@@ -20,6 +20,5 @@ public class EyePoint : MonoBehaviour {
             User = false;
         }
         idleForm.GetComponent<IdleForm>().activate = User;
-
     }
 }
