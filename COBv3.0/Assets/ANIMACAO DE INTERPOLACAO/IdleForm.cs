@@ -22,6 +22,7 @@ public class IdleForm : MonoBehaviour
     void Start()
     {
         InitialScaleForm = transform.localScale.x;
+        Game_Manager.CubeIdle = this.gameObject;
     }
 
     void Update()

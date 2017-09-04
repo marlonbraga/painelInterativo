@@ -20,18 +20,18 @@ public class Game_Manager : MonoBehaviour {
     {
         Debug.Log("Avatar Removido: " + indexUser);
         QtdUsers++;
-        if (indexUser == 1 && QtdUsers == 1)
+        if (indexUser == 0 /*&& QtdUsers == 1*/)
         {
-            CubeIdle.GetComponent<IdleForm>().activate = true;
+            CubeIdle.GetComponent<IdleForm>().activate = false;
         }
     }
     static public void AvatarAddicioned(int indexUser)
     {
         Debug.Log("Avatar Adicionado: " + indexUser);
         QtdUsers--;
-        if (indexUser == 1 && QtdUsers == 0)
+        if (indexUser == 0 /*&& QtdUsers == 0*/)
         {
-            CubeIdle.GetComponent<IdleForm>().activate = false;
+            CubeIdle.GetComponent<IdleForm>().activate = true;
         }
     }
 }

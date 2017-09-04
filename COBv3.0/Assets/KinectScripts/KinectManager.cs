@@ -3797,7 +3797,7 @@ public class KinectManager : MonoBehaviour
 				}
 				
 				Debug.Log("Adding user " + uidIndex + ", ID: " + userId + ", Body: " + bodyIndex);
-                Game_Manager.AvatarAddicioned(bodyIndex);
+                Game_Manager.AvatarAddicioned(uidIndex);
 				dictUserIdToIndex[userId] = bodyIndex;
 				dictUserIdToTime[userId] = Time.time;
 				alUserIds.Add(userId);
