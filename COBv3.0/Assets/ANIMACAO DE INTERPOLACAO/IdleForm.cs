@@ -99,7 +99,7 @@ public class IdleForm : MonoBehaviour
     {
         yield return new WaitForSeconds(delay * Time.deltaTime);
 
-        for (int i = 0; i < avatar.Length - 1; i++)
+        for (int i = 0; i < avatar.Length; i++)
         {
             if (avatar[0]) { avatar[i].SetActive(b); }
         }

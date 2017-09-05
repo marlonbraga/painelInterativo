@@ -10,7 +10,8 @@ public class LineRenderEffect : MonoBehaviour
     private GameObject pointTarget;
     [SerializeField]
     private GameObject tentacleJoint;
-
+    public int indexUser = 0;
+    public int indexLineRednerer = 0;
     private List<GameObject> tentacleRig = new List<GameObject>();
     private List<GameObject> pointsTarget = new List<GameObject>();
     private Vector3 lastPosition;
@@ -18,8 +19,11 @@ public class LineRenderEffect : MonoBehaviour
     public float x;
     public float velocity;
     public float scaleObject;
+    [Range(0, 0.5f)]
+    public float tentacleSlowness = 0.2f;
     public GameObject hand;
-   // public GameObject ocludeHand;
+    public GameObject particle;
+    public int count = 0;
 
     private void Start()
     {
@@ -34,18 +38,20 @@ public class LineRenderEffect : MonoBehaviour
             var tj = Instantiate(tentacleJoint);
             tj.name = "TentacleJoint" + i;
             tj.GetComponent<TentacleAvatar>().TentacleTarget = pt;
-            tj.GetComponent<TentacleAvatar>().Speed = (i * 0.15f);
+            tj.GetComponent<TentacleAvatar>().Speed = (i * tentacleSlowness);
+
             if (i == numOfVertices - 1)
             {
                 hand = Instantiate(hand, tj.transform);
                 hand.GetComponent<HandElastic>().target = tentacleRig[i - 1].transform;
                 hand.transform.localPosition = Vector3.zero;
-                hand.transform.localScale = new Vector3(0.1f,0.1f,0.1f);
+                hand.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                 hand.transform.localRotation = Quaternion.Euler(180, 0, 0);
             }
             tentacleRig.Add(tj);
         }
         GetComponent<LineRenderer>().positionCount = numOfVertices;
+        Game_Manager.Avatar[indexUser][indexLineRednerer] = hand;
     }
 
     void Update()
@@ -98,12 +104,31 @@ public class LineRenderEffect : MonoBehaviour
             hand.SetActive(false);
         }
     }
-    void LateUpdate() { 
+    void LateUpdate()
+    {
         //Desenhar braço (LINE RENDERER)
         for (int i = 0; i < tentacleRig.Count; i++)
         {
             GetComponent<LineRenderer>().SetPosition(i, tentacleRig[i].transform.position);
+            if (/*i % 1 == 0  && */ velocity > x && count>=10)
+            {
+                var p = Instantiate(particle);
+                p.transform.parent = tentacleRig[i].transform;
+                p.transform.localPosition = Vector3.zero;
+                p.transform.localRotation = Quaternion.Euler(Vector3.zero);
+                StartCoroutine(DestroyParticles(3, p));
+                if (i >= tentacleRig.Count-1)
+                {
+                    count = 0;
+                    Debug.Log("+count :" + count);
+                }
+            }
         }
-
+        count++;
+    }
+    IEnumerator DestroyParticles(float delay, GameObject particle)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(particle);
     }
 }

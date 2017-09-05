@@ -17,7 +17,6 @@ public class FollowingSpheres : MonoBehaviour
     {
         Spheres = gameObject.gameObject.GetComponentsInChildren<Sphere>();
     }
-
     void FixedUpdate()
     {
         if (movement == true)
