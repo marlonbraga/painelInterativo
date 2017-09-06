@@ -11,6 +11,15 @@ public class Game_Manager : MonoBehaviour {
     {
         QtdUsers = 0;
     }
+    static public void AvatarAddicioned(int indexUser)
+    {
+        Debug.Log("Avatar Adicionado: " + indexUser);
+        QtdUsers--;
+        if (indexUser == 0 /*&& QtdUsers == 0*/)
+        {
+            CubeIdle.GetComponent<IdleForm>().activate = true;
+        }
+    }
     static public void AvatarRemovement(int indexUser)
     {
         Debug.Log("Avatar Removido: " + indexUser);
@@ -21,15 +30,6 @@ public class Game_Manager : MonoBehaviour {
         }
         //Avatar[indexUser][1].SetActive(false);
         //Avatar[indexUser][0].SetActive(false);
-        
     }
-    static public void AvatarAddicioned(int indexUser)
-    {
-        Debug.Log("Avatar Adicionado: " + indexUser);
-        QtdUsers--;
-        if (indexUser == 0 /*&& QtdUsers == 0*/)
-        {
-            CubeIdle.GetComponent<IdleForm>().activate = true;
-        }
-    }
+
 }

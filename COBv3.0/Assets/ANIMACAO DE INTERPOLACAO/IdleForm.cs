@@ -24,27 +24,9 @@ public class IdleForm : MonoBehaviour
         InitialScaleForm = transform.localScale.x;
         Game_Manager.CubeIdle = this.gameObject;
     }
-
     void Update()
     {
-        ////IDLE rotation
-        //transform.Rotate(0, 0f, speedRotation * Time.deltaTime);
 
-        ////IDLE pulsing
-        //if (activate == false)
-        //{
-        //    if (transform.localScale.x > InitialScaleForm + pulseIntensity)
-        //    {
-        //        idlePulse = idlePulse * -1;
-        //    }
-        //    if (transform.localScale.x < InitialScaleForm - pulseIntensity)
-        //    {
-        //        idlePulse = idlePulse * -1;
-        //    }
-        //    float PulsingFactor = pulseSpeed * idlePulse * Time.deltaTime;
-        //    Vector3 ReducingVector = new Vector3(PulsingFactor, PulsingFactor, PulsingFactor);
-        //    transform.localScale = transform.localScale + ReducingVector;
-        //}
         //ACTIVATE
         if (activate == true && reducing == false && augmenting == false && user == false)
         {

@@ -6,7 +6,7 @@ public class FollowingSpheres : MonoBehaviour
 {
 
     public GameObject ParticlePreFab;
-    public GameObject[] BodyPiece;
+    public GameObject[] MaleBody;
     private Sphere[] Spheres;
     [HideInInspector]
     public bool movement = false;
@@ -23,11 +23,11 @@ public class FollowingSpheres : MonoBehaviour
         {
             if (follow)
             {
-                for (int i = 0; i < Mathf.Min(Spheres.Length, BodyPiece.Length); i++)
+                for (int i = 0; i < Mathf.Min(Spheres.Length, MaleBody.Length); i++)
                 {
                     StartCoroutine(reduceSpheres(Spheres[i].gameObject.transform));
                     Vector3 pos;
-                    pos = BodyPiece[i].transform.position;
+                    pos = MaleBody[i].transform.position;
                     iTween.MoveUpdate(Spheres[i].gameObject, pos, 1.2f);
                     if (lastFollow != follow)
                     {
@@ -47,7 +47,7 @@ public class FollowingSpheres : MonoBehaviour
             }
             else
             {
-                for (int i = 0; i < Mathf.Min(Spheres.Length, BodyPiece.Length); i++)
+                for (int i = 0; i < Mathf.Min(Spheres.Length, MaleBody.Length); i++)
                 {
                     Vector3 pos;
                     pos = gameObject.transform.position;
@@ -57,7 +57,7 @@ public class FollowingSpheres : MonoBehaviour
                         if (i == 0)
                         {
                             GameObject P;
-                            P = Instantiate(ParticlePreFab, BodyPiece[0].transform.position, BodyPiece[0].transform.rotation);
+                            P = Instantiate(ParticlePreFab, MaleBody[0].transform.position, MaleBody[0].transform.rotation);
                             //P.transform.parent = BodyPiece[0].transform;
                             StartCoroutine(DestroyParticles(4f, P));
                         }
