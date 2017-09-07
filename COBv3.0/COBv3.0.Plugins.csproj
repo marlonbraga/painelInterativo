@@ -84,6 +84,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Plugins\Pixelplacement\iTween\iTween.cs" />
+    <Compile Include="Assets\Plugins\Pixelplacement\iTween\Sample\MoveSample.cs" />
+    <Compile Include="Assets\Plugins\Pixelplacement\iTween\Sample\RotateSample.cs" />
+    <Compile Include="Assets\Plugins\Pixelplacement\iTween\Sample\SampleInfo.cs" />
     <Compile Include="Assets\Standard Assets\CameraIntrinsics.cs" />
     <Compile Include="Assets\Standard Assets\CollectionMap.cs" />
     <Compile Include="Assets\Standard Assets\EventPump.cs" />
@@ -216,6 +220,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Materials\Shaders\DepthMask.shader" />
+    <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\Resources\BlurShader.shader" />
     <None Include="Assets\Resources\BlurShader2.shader" />
     <None Include="Assets\Resources\BlurShader3.shader" />

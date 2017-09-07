@@ -92,12 +92,9 @@
   <ItemGroup>
     <Compile Include="Assets\ANIMACAO DE INTERPOLACAO\FollowingSpheres.cs" />
     <Compile Include="Assets\ANIMACAO DE INTERPOLACAO\IdleForm.cs" />
-    <Compile Include="Assets\ANIMACAO DE INTERPOLACAO\Plugins\Pixelplacement\iTween\iTween.cs" />
-    <Compile Include="Assets\ANIMACAO DE INTERPOLACAO\Plugins\Pixelplacement\iTween\Sample\MoveSample.cs" />
-    <Compile Include="Assets\ANIMACAO DE INTERPOLACAO\Plugins\Pixelplacement\iTween\Sample\RotateSample.cs" />
-    <Compile Include="Assets\ANIMACAO DE INTERPOLACAO\Plugins\Pixelplacement\iTween\Sample\SampleInfo.cs" />
     <Compile Include="Assets\ANIMACAO DE INTERPOLACAO\Sphere.cs" />
     <Compile Include="Assets\EyePoint.cs" />
+    <Compile Include="Assets\FootLineRenderer.cs" />
     <Compile Include="Assets\Game_Manager.cs" />
     <Compile Include="Assets\Hadouken.cs" />
     <Compile Include="Assets\HandElastic.cs" />
@@ -237,6 +234,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Materials\Shaders\DepthMask.shader" />
+    <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\Resources\BlurShader.shader" />
     <None Include="Assets\Resources\BlurShader2.shader" />
     <None Include="Assets\Resources\BlurShader3.shader" />

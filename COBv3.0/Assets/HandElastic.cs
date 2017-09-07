@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
+﻿using UnityEngine;
 
 public class HandElastic : MonoBehaviour {
     public Transform target;
@@ -9,7 +6,7 @@ public class HandElastic : MonoBehaviour {
 	void Update () {
         AjustRotation();
     }
-    [ContextMenu("AjustRotation()")]
+    
     public void AjustRotation()
     {
         transform.LookAt(target);

@@ -115,7 +115,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 5667fb372c2b292ccdec2a31aaac98fa UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 5667fb372c2b292ccdec2a31aaac98fa UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 c24a21b131bfa67be1162db2cba4b52b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-570fae5910524dc56bbd421609f3455d Assembly-CSharp.dll:.TentacleAvatar
+dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.TentacleAvatar
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.JumpTrigger
 c270b91f96c1167b032a213de9d73cb6 Assembly-CSharp.dll:.SetFaceTexture
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RaiseHandListener
@@ -140,6 +140,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 deb5f7e605da5fa2e4d8fc4896da34b6 Assembly-CSharp.dll:.EggSpawner
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MoveSample
 adeb53223c802e4e6a94eb37246799fa Assembly-CSharp.dll:.TextureOffset
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Game_Manager
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
@@ -152,7 +153,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 adaf460021b8bb2ff15ae387ab205ce7 Assembly-CSharp.dll:.HeightEstimator
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.KinectPlayerController
 fd0445ea29e41dc6d896a76daeb2c20f Assembly-CSharp.dll:.Rotating
-f3d52e24201e4f29c895fddea789897d Assembly-CSharp.dll:.IdleForm
+2d30bfeb5730703c0e7525d0483df2fb Assembly-CSharp.dll:.IdleForm
 03a5ff285e88860d3ea25e3c7253e22e Assembly-CSharp.dll:.SequentialGestureListener
 e64aa7772322be17a267c340324c7db0 Assembly-CSharp.dll:.UserHeadCamera
 41e268bc7ee2a26a6db3cc24be754b8d Assembly-CSharp.dll:.AvatarController
@@ -164,6 +165,7 @@ bb47b603eb25446046dc816366c61502 Assembly-CSharp.dll:.JointPositionView
 ee2e902576c356c36166bd2853bb3175 Assembly-CSharp.dll:.MousePointOverlayer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:Helper.EventPump
 50d9ad4b9170293f0b7236d87a812d8d Assembly-CSharp.dll:.ForegroundBlender
+0ea7e3a1b65cd933d7a007e6774c4eaa Assembly-CSharp.dll:.HandElastic
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.JointKey
 7015cf3909fec80b28f22bd0dc5b0cd6 Assembly-CSharp.dll:.PointCloudView
 57bf875b4d202bc5c5164f60de3c04a7 Assembly-CSharp.dll:.skyBoxCam2
@@ -177,7 +179,7 @@ fbc1b6983ed089a2579655835446f6ab Assembly-CSharp.dll:.SimpleInteractionListener
 d872e04c2ea4b557f1f5400af6b3c8a6 Assembly-CSharp.dll:.UserHandVisualizer
 53ae982ef89a3aa69c1c9907b507e753 Assembly-CSharp.dll:.LoadLevelWithDelay
 8441c478ad073c9b69302e141895ede8 Assembly-CSharp.dll:.PointmanController
-4ec96c1a06103599b14eb9b2aaf459d7 Assembly-CSharp.dll:.LineRenderEffect
+99457e2f0a6115baae2d4dbba4e6dcf9 Assembly-CSharp.dll:.LineRenderEffect
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PortraitBackground
 a1ce0c3141be3ae70808d64035a67a88 Assembly-CSharp.dll:.ThirdPersonCamera
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -198,7 +200,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LoadFirstLevel
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ForegroundToRenderer
 206265cb74cffdbfdb61ca60cae767c4 Assembly-CSharp.dll:.GetFacePointsDemo
-07ec23d8694cbe4d922bafa8c02c90a7 Assembly-CSharp.dll:.FollowingSpheres
+a4eb43eefd9ceaba0215ec0c94acae98 Assembly-CSharp.dll:.FollowingSpheres
 d3fc12595c98e998746466148a54e29f Assembly-CSharp.dll:.CloudFaceManager
 f43d2ffa8beded6ab7d4c389ae75736a Assembly-CSharp.dll:.KinectRecorderPlayer
 9ed237a3ab344251731c52e0f9557bca Assembly-CSharp.dll:.DepthSpriteViewer
