@@ -30,13 +30,13 @@ public class LineRenderEffect : MonoBehaviour
         for (int i = 0; i < numOfVertices; i++)
         {
             var pt = Instantiate(pointTarget);
-            pt.name = "PointTarget" + i;
+            pt.name = "PointTargetHand" + i;
             pt.transform.parent = transform;
-            pt.transform.localPosition = new Vector3(0, i * 0.1f, 0);
+            pt.transform.localPosition = new Vector3(0, 0, 0);
             pointsTarget.Add(pt);
 
             var tj = Instantiate(tentacleJoint);
-            tj.name = "TentacleJoint" + i;
+            tj.name = "TentacleJointHand" + i;
             tj.GetComponent<TentacleAvatar>().TentacleTarget = pt;
             tj.GetComponent<TentacleAvatar>().Speed = (i * tentacleSlowness);
 
@@ -51,7 +51,7 @@ public class LineRenderEffect : MonoBehaviour
             tentacleRig.Add(tj);
         }
         GetComponent<LineRenderer>().positionCount = numOfVertices;
-        Game_Manager.Avatar[indexUser][indexLineRednerer] = hand;
+        //Game_Manager.Avatar[indexUser][indexLineRednerer] = hand;
     }
 
     void Update()

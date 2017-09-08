@@ -226,6 +226,8 @@
     <Compile Include="Assets\LineRenderEffect.cs" />
     <Compile Include="Assets\Materials\skyBoxCam2.cs" />
     <Compile Include="Assets\ParticleSystemHandler.cs" />
+    <Compile Include="Assets\Scripts\EnumTypes.cs" />
+    <Compile Include="Assets\Scripts\Foot.cs" />
     <Compile Include="Assets\Scripts\Rotating.cs" />
     <Compile Include="Assets\Scripts\skyBoxCam.cs" />
     <Compile Include="Assets\Scripts\TextureOffset.cs" />
